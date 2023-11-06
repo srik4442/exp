@@ -4,7 +4,7 @@ body {
     padding: 0;
     display: flex;
     flex-direction: column;
-    background-image: url('/Users/srikarathikkireddy/Documents/task2/src/animal-welfareincludes-pet-animals-like-dogs-and-upscaled.png');
+    background-image: url('src/animal-welfareincludes-pet-animals-like-dogs-and-upscaled.png');
     background-color: rgba(51, 51, 51, 0.7);
     color: #fff;
     background-blur: 10px;
