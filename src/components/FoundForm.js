@@ -1,28 +1,8 @@
 import React, { useState } from 'react';
+import './FoundForm.css'; // Import the CSS file
 
 const FoundForm = () => {
   const [showOverlay, setShowOverlay] = useState(false);
-
-  const buttonStyle = {
-    backgroundColor: 'transparent',
-    border: '1px solid #fff',
-    color: '#fff',
-    padding: '10px 20px',
-    fontSize: '1rem',
-    cursor: 'pointer',
-    transition: 'background-color 0.3s ease',
-  };
-
-  const overlayStyle = {
-    display: showOverlay ? 'block' : 'none',
-    position: 'fixed',
-    top: 0,
-    left: 0,
-    width: '100%',
-    height: '100%',
-    backgroundColor: 'rgba(0, 0, 0, 0.7)', // Semi-transparent black overlay
-    zIndex: 9999,
-  };
 
   const closeOverlay = () => {
     setShowOverlay(false);
@@ -37,13 +17,13 @@ const FoundForm = () => {
     <div className="card bg-success text-white">
       <div className="card-body">
         <h2 className="card-title">Report a Found Pet</h2>
-        <button style={buttonStyle} onClick={handleButtonClick}>Report</button>
+        <button className="buttonStyle" onClick={handleButtonClick}>Report</button>
         {/* Found pet form fields */}
       </div>
-      <div style={overlayStyle} onClick={closeOverlay}>
+      <div className={`overlay ${showOverlay ? 'visible' : ''}`} onClick={closeOverlay}>
         {/* Content for the full-page overlay */}
         <div style={{ position: 'absolute', top: '50%', left: '50%', transform: 'translate(-50%, -50%)' }}>
-          <h2>Showing content for found pet</h2>
+          <h2 className="t1">Showing content for found pet</h2>
           {/* Add more content for the overlay */}
         </div>
       </div>
