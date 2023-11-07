@@ -1,0 +1,48 @@
+.buttonStyle {
+    background-color: transparent;
+    border: 1px solid #fff;
+    color: #fff;
+    padding: 10px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+    animation: neon-border 1.5s infinite alternate;
+  }
+  
+  .overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 9999;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+  
+  .overlay-content {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+  }
+  
+  .visible {
+    display: flex;
+  }
+  @keyframes neon-border {
+    0% {
+      border-color: #4d94ff;
+      box-shadow: 0 0 5px #4d94ff;
+    }
+    100% {
+      border-color: #00ccff;
+      box-shadow: 0 0 10px #00ccff, 0 0 20px #00ccff, 0 0 30px #00ccff, 0 0 40px #00ccff, 0 0 50px #00ccff;
+    }
+  }
+  
+.t1{
+    color: green;
+}
